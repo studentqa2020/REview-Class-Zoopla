@@ -1,5 +1,7 @@
 package com.page.object.model;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +13,6 @@ public class MasterPageFactoryLoginPage {
 
 		PageFactory.initElements(driver, this);
 	}
-
 	@FindBy(xpath = "//*[@class='ui-button-primary ui-cookie-accept-all-medium-large']")
 	private WebElement acceptCookies;
 	@FindBy(xpath = "(//*[@class='css-18j99f0 e11d441i1'])[4]")
@@ -22,6 +23,8 @@ public class MasterPageFactoryLoginPage {
 	private WebElement pass;
 	@FindBy(xpath = "//*[@id='signin_submit']")
 	private WebElement submit;
+	@FindBy(xpath = "//*[@class='browse-row-clickable row-even is-collapsed' or contains(@class,'browse-row-clickable is-collapsed')]")
+	private List<WebElement> tableRows;
 
 	public WebElement getLogin() {
 		return Login;
@@ -42,6 +45,12 @@ public class MasterPageFactoryLoginPage {
 	public WebElement getAcceptCookies() {
 		return acceptCookies;
 	}
+
+	public List<WebElement> getTableRows() {
+		return tableRows;
+	}
+
+
 
 	
 }

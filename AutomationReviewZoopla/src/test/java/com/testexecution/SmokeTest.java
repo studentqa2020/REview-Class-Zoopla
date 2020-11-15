@@ -10,9 +10,16 @@ public class SmokeTest {
 	
 	public static void main(String[] args) throws Throwable {
 
-		driver=	BaseLogin.getLogin();
+		driver =BaseLogin.getDriverManager();//setup
 		
-		driver.quit();
+		driver=	BaseLogin.getLogin(driver);//test cases
+		
+		driver= BaseLogin.getPriceTable(driver);
+		
+		driver.quit();//close the browser
 	}
+	
+	//work =YES
+	//Problem = no report
 	
 }
