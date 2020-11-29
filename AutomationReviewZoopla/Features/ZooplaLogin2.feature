@@ -1,9 +1,9 @@
-@Smoke
-Feature: Login feature testing 
+@Regression
+Feature: Payment feature testing 
 	Description : note about your requirement
 #	Background: common steps
 
-@TC_001	
+@TC_006	
 Scenario:
 As a Zoopla user , i can login successfully with valid user name and password 
 	Given Open the browser 
