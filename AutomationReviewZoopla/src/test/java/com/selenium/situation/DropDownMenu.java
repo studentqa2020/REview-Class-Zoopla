@@ -31,15 +31,16 @@ public class DropDownMenu {
 		Select sel = new Select(countryInputBox);
 		Highlighter.getcolor(driver, countryInputBox);
 		sel.selectByIndex(0);//Albania
+		Thread.sleep(3000);
 		sel.selectByIndex(47);//china
 		Thread.sleep(3000);
 		sel.selectByVisibleText("BRAZIL");
 		Thread.sleep(3000);
 		sel.selectByValue("BANGLADESH");//BAN
-
+		Thread.sleep(3000);
 		System.out.println(sel.getOptions().size());
 	
-		
+		driver.quit();
 		
 		
 		

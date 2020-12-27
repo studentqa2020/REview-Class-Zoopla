@@ -26,15 +26,15 @@ public class AlertPoPupInSelenium {
 
 		driver.get("http://demo.guru99.com/selenium/delete_customer.php");
 		
-		//*[@type='text']
+		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//*[@type='text']")).sendKeys("123456");
 		
-		//*[@name='submit']
+		Thread.sleep(2000);
 		
 		//selenium click
 		driver.findElement(By.xpath("//*[@name='submit']")).click();
-		
+		Thread.sleep(2000);
 
 		//>>>>>>>>>>>got alert pop up or pop up window === Alert interface
 		
@@ -43,6 +43,7 @@ public class AlertPoPupInSelenium {
 		Alert obj = driver.switchTo().alert();// move from main window to alert window
 		 System.out.println( "Before clcik ="+obj.getText());
 		obj.accept();// click ok btn
+		Thread.sleep(2000);
 		// obj.dismiss();// click cancel btn
 		 System.out.println("After click = "+ obj.getText());
 		

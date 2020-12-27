@@ -15,9 +15,11 @@ public class HandleMultipleWindows {
 		driver.manage().window().maximize();
 
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
-
+		Thread.sleep(2000);
 		String ParentWindow = driver.getWindowHandle();//1st window or parent
 		System.out.println("Parent woindow ="+driver.getWindowHandle());
 		// To handle all new opened window.
@@ -39,7 +41,7 @@ public class HandleMultipleWindows {
 				driver.findElement(By.xpath("//*[@name='btnLogin']")).click();
 				Thread.sleep(3000);
 				driver.close(); //only current window tear down
-				//driver.quit();// All windows tear down
+				
 			}
 	
 			i++;
@@ -49,10 +51,13 @@ public class HandleMultipleWindows {
 		//out side of loop then move back to parent again
 		driver.switchTo().window(ParentWindow);
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[contains(@href,'popup.php')]")).click();
+		Thread.sleep(2000);
 		allWindows = driver.getWindowHandles();
 		System.out.println("Total window after loop and after click 3 times ="+allWindows.size());
-
+		driver.quit();// All windows tear down
 	}
 }

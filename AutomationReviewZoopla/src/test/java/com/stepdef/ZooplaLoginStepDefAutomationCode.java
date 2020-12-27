@@ -4,8 +4,9 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
 
+import com.email.manager.EmailWithAttachment;
+import com.email.manager.SendEmail;
 import com.page.object.model.MasterPageFactoryLoginPage;
 import com.util.BaseConfig;
 
@@ -69,7 +70,7 @@ public class ZooplaLoginStepDefAutomationCode {
 	}
 
 	@When("close the browser")
-	public void close_the_browser() {
+	public void close_the_browser() throws Throwable {
 		driver.quit();
 	}
 
