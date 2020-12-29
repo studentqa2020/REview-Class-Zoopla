@@ -12,7 +12,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		plugin = { "pretty", "html:target/html report/cucumber-pretty", "json:target/cucumber.json" }, 
+		plugin = { "pretty", "html:target/html report/cucumber-pretty", 
+				"json:target/cucumber.json" ,
+				//"com.cucumber.listener.ExtentCucumberFormatter:target/Cucumber_Extents_report.html" 
+				}, 
 		//future = cucumber maven report
 		//why ? for report
 		features = {"./Features/ZooplaLogin.feature" }, // feature location

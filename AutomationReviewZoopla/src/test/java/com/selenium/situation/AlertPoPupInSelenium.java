@@ -40,12 +40,12 @@ public class AlertPoPupInSelenium {
 		
 		//Alert obj = new Alert(); XXXXXXXXXXXXXXXXX
 		
-		Alert obj = driver.switchTo().alert();// move from main window to alert window
-		 System.out.println( "Before clcik ="+obj.getText());
-		obj.accept();// click ok btn
+		Alert alert = driver.switchTo().alert();// move from main window to alert window
+		 System.out.println( "Before clcik ="+alert.getText());
+		 alert.accept();// click ok btn
 		Thread.sleep(2000);
-		// obj.dismiss();// click cancel btn
-		 System.out.println("After click = "+ obj.getText());
+		// alert.dismiss();// click cancel btn
+		 System.out.println("After click = "+ alert.getText());
 		
 		driver.quit();
 		 

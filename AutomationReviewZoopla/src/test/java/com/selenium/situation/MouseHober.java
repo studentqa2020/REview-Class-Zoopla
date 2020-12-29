@@ -16,7 +16,7 @@ public class MouseHober {
 		WebDriver driver = new ChromeDriver();// upcasting
 		driver.manage().window().maximize();
 		driver.get("https://www.costco.com/");
-		WebElement membership = driver.findElement(By.xpath("(//*[text()='Membership'])[3]"));
+		WebElement membership = driver.findElement(By.xpath("(//*[@class='nav-item'])[4]"));
 		Actions a = new Actions(driver);
 		a.moveToElement(membership).perform();
 		Highlighter.getcolor(driver, membership);//static

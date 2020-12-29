@@ -41,6 +41,11 @@
 			<artifactId>extentreports</artifactId>
 			<version>4.0.9</version>
 		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>4.7.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.simplejavamail/simple-java-mail -->
 		<dependency>
 			<groupId>org.simplejavamail</groupId>
