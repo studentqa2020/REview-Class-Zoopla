@@ -4,8 +4,9 @@ agent any
 stages{
 stage("Build"){
 steps{
-sh "mvn -version"
-sh "mvn clean install"}
+withMaven(maven : 'maven_3_6_3'){
+sh "mvn clean install"
+}
 }
 
 }
