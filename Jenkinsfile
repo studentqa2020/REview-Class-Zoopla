@@ -1,7 +1,7 @@
 pipeline{
 agent any
   environment{
-  mvn=MAVEN_HOME
+  mvn= 'MAVEN_HOME'
   }
 
 stages{
