@@ -1,4 +1,4 @@
-@Smoke
+@RunTest
 Feature: Login feature testing 
 	Description : note about your requirement
 #	Background: common steps
@@ -10,7 +10,7 @@ As a Zoopla user , i can login successfully with valid user name and password
 	When Send URL 
 	And  Accept cookies 
 	And Click Sign in btn 
-	And Send valid email 
+	And Send valid email
 	And Send valid password 
 	And Click submit btn 
 	Then Validate login success or fail 

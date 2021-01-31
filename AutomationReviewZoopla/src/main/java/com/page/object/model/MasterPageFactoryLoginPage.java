@@ -15,7 +15,7 @@ public class MasterPageFactoryLoginPage {
 	}
 	@FindBy(xpath = "//*[@class='ui-button-primary ui-cookie-accept-all-medium-large']")
 	private WebElement acceptCookies;
-	@FindBy(xpath = "(//*[@class='css-18j99f0 e11d441i1'])[4]")
+	@FindBy(xpath = "(//*[contains(text(),'Sign in')])[1]")
 	private WebElement Login;
 	@FindBy(xpath = "//*[@id='signin_email']")
 	private WebElement email;

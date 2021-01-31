@@ -1,4 +1,4 @@
-@Regression
+@RunTest
 Feature: Payment feature testing 
 	Description : note about your requirement
 #	Background: common steps
